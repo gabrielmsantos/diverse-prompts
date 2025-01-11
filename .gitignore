@@ -16,3 +16,6 @@
 config.local.py
 secrets.py
 credentials.json
+
+!/features/MAPELITES/PARQUET/*.parquet
+!/features/RANDOM/PARQUET/*.parquet
