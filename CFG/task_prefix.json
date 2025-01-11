@@ -1,0 +1,18 @@
+[
+    {
+        "name": "bbq_lite_json_age_disambig",
+        "task_prefix": "Read the given context and determine the most appropriate answer to the question based on the information provided."
+    },
+    {
+        "name": "formal_fallacies_syllogisms_negation",
+        "task_prefix": "Read the given context and determine the most appropriate answer to the question based on the information provided."
+    },
+    {
+        "name": "known_unknowns",
+        "task_prefix": "Read the given context and determine the most appropriate answer to the question based on the information provided."
+    },
+    {
+        "name": "strange_stories_boolean",
+        "task_prefix": "Read the given context and determine the most appropriate answer to the question based on the information provided."
+    }
+]

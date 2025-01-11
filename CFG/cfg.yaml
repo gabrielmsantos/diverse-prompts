@@ -1,0 +1,71 @@
+start_symbol: "<prompt>"
+# === NON TERMINAL SYMBOLS ====
+"<prompt>":
+  - "<base> <input> <instruction>"
+  - "<context> <base> <input> <instruction>"
+"<base>":
+  - "<nshot> <nsbs>"
+  - "<nsbs> <nshot>"
+  - "<nshot>"
+"<nshot>":
+  - "<req> <examples>"
+  - "<examples> <req>"
+  - "<req>"
+"<examples>":
+  - "Consider this example: [[EXAMPLE]]"
+  - "Consider these examples: [[EXAMPLE]], <example>"
+"<example>": #SPECIFIC
+  - "[[EXAMPLE]]"
+  - "[[EXAMPLE]], <example>"
+
+
+# === TERMINAL SYMBOLS ====
+"<instruction>": # SPECIFIC @TODO: Change this to be in the individual.
+  - "[[INSTRUCTION]]"
+"<input>":
+  - "[[INPUT]]"  
+"<req>": #SPECIFIC @TODO: Change this to be in the individual.
+  - "[[REQUEST]]"
+"<context>": #GENERIC
+  - "You are a researcher presenting your findings at a scientific conference, answering questions from fellow scientists."
+  - "Explain your research as if you are at a scientific conference, engaging with inquisitive experts."
+  - "Present your findings at a conference, addressing the questions posed by fellow researchers."
+  - "Imagine you are discussing your research at a scientific conference, providing detailed answers to your peers."
+  - "You are explaining your study results at a scientific conference, clarifying any doubts from the audience."
+  - "Describe your research to fellow scientists at a conference, responding to their questions with thorough explanations."
+  - "You are a researcher at a conference, illustrating your findings to other scientists during the Q&A session."
+  - "Present your research as if you are at a scientific conference, elaborating on key points in response to questions."
+  - "Explain your study outcomes in the context of a scientific conference, addressing the curiosity of your peers."
+  - "Imagine you are at a scientific conference, responding to your fellow researchers' questions about your work."
+"<nsbs>": #GENERIC
+  - "Think step by step. The number of steps you must consider is <number> ."
+  - "Please solve this problem carefully, and make sure you cover exactly <number> steps."
+  - "Break down the task into a sequence, ensuring the process involves <number> steps."
+  - "Approach this problem systematically, focusing on the required <number> steps."
+  - "Think through the solution methodically. You need to complete <number> steps."
+  - "Provide a detailed answer and ensure your explanation includes <number> steps."
+  - "Solve this problem by addressing the issues in a total of <number> steps."
+  - "Explain the problem using a structured method. There are <number> steps."
+  - "Outline your thought process comprehensively. It should consist of <number> steps."
+  - "Break down the solution into clear stages. The final number of steps is <number> ."
+  - "Please break down the solution into small, logical steps."
+  - "Think through each part of the problem methodically and provide a step-by-step solution."
+  - "Solve this problem in a detailed, sequential manner."
+  - "Explain each step in the thought process leading to the solution."
+  - "Approach the problem by considering each step in detail, one at a time."
+  - "Walk through the problem step-by-step before arriving at the final conclusion."
+  - "Solve this as if you are explaining it to someone unfamiliar with the topic, detailing each step."
+  - "Can you solve this problem in a gradual manner, outlining each thought process involved?"
+  - "Think about the problem systematically and solve it by addressing each aspect one step at a time."
+  - "Please outline a detailed, step-by-step reasoning process to solve this issue."
+"<number>": #GENERIC
+  - "1"
+  - "2"
+  - "3"
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+  - "8"
+  - "9"
+  - "10"
